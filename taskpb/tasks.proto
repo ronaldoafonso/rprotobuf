@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package taskpb;
+
+option go_package = "github.com/ronaldoafonso/rprotobuf/taskpb";
+
+message Task {
+    int32 id = 1;
+    string name = 2;
+    bool done = 3;
+    repeated string actions = 4;
+}
+
+message Tasks {
+    repeated Task task = 1;
+}
